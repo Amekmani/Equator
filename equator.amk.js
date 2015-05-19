@@ -6,7 +6,7 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-$(document).ready(function(){
+$(window).load(function(){
 
   var cont = $(document).find("[data-equator]");
   var elem = cont.find("[data-equator-watch]");
