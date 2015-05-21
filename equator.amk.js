@@ -6,16 +6,18 @@
 * http://www.opensource.org/licenses/mit-license.php
 */
 
-$(window).load(function(){
+jQuery(function ($) {
+    $(window).load(function () {
 
-  var cont = $(document).find("[data-equator]");
-  var elem = cont.find("[data-equator-watch]");
-  var kevinhart = 0;
-  $(elem).each(function () {
-    if($(this).height() > kevinhart){
-      kevinhart = $(this).height();
-    }
-  });
-  elem.css({ height : kevinhart });
+        var cont = $(document).find("[data-equator]");
+        var elem = cont.find("[data-equator-watch]");
+        var kevinhart = 0;
+        $(elem).each(function () {
+            if ($(this).height() > kevinhart) {
+                kevinhart = $(this).height();
+            }
+        });
+        elem.css({height: kevinhart});
 
+    });
 });
