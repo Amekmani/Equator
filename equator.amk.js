@@ -21,11 +21,7 @@ jQuery(function ($) {
 
   }
 
-    $(window)
-    .load(function () {
-      equate();
-    })
-    .resize(function(){
+  $(window).load(function () {
       equate();
     });
 });
