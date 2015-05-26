@@ -7,17 +7,25 @@
 */
 
 jQuery(function ($) {
-    $(window).load(function () {
+  function equate(){
 
-        var cont = $(document).find("[data-equator]");
-        var elem = cont.find("[data-equator-watch]");
-        var kevinhart = 0;
-        $(elem).each(function () {
-            if ($(this).height() > kevinhart) {
-                kevinhart = $(this).height();
-            }
-        });
-        elem.css({height: kevinhart});
+      var cont = $(document).find("[data-equator]");
+      var elem = cont.find("[data-equator-watch]");
+      var kevinhart = 0;
+      $(elem).each(function () {
+          if ($(this).height() > kevinhart) {
+              kevinhart = $(this).height();
+          }
+      });
+      elem.css({height: kevinhart});
 
+  }
+
+    $(window)
+    .load(function () {
+      equate();
+    })
+    .resize(function(){
+      equate();
     });
 });
